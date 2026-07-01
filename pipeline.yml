@@ -1,0 +1,54 @@
+trigger:
+- none
+  
+pool: Azure Pipelines
+  
+variables:
+  - group: ctp-dalk-prod
+  - name : variablesetting
+    value: '-var="subscription_id=$(subscription_id)" -var="client_id=$(client_id)" -var="client_secret=$(client_secret)" -var="tenant_id=$(tenant_id)"'
+  
+steps:
+  - task: TerraformInstaller@1 
+    displayName: Terraform installation
+    inputs:
+      terraformVersion: Latest
+  
+  - task: TerraformTaskV1@2
+    displayName: 'Terraform Init'
+    inputs:
+      backendAzureRmContainerName: 'ctp-prod-tfstate'
+      backendAzureRmKey: 'terraform.tfstate'
+      backendAzureRmResourceGroupName: 'NI-EUS2-DALK-PROD-CTP-TFSTATE-RG'
+      backendAzureRmStorageAccountName: 'nieus2dlkprdctptfstate'
+      backendServiceArm: 'DALK-PROD'
+      command: 'init'
+      commandOptions: '-reconfigure'
+      provider: 'azurerm'
+     
+      workingDirectory: '$(System.DefaultWorkingDirectory)/ctp-prod'
+         
+    
+  - task: TerraformTaskV2@3
+    displayName: 'Terraform Plan'
+    inputs:
+      command: 'plan'
+      commandOptions: '-var="subscription_id=$(subscription_id)" -var="client_id=$(client_id)" -var="client_secret=$(client_secret)" -var="tenant_id=$(tenant_id)" -out=tfplan'
+      environmentServiceNameAzureRM: 'DALK-PROD'
+      provider: 'azurerm'
+      #commandOptions: '-out=tfplan'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/ctp-prod'
+      
+      
+  
+  - task: TerraformTaskV3@3
+    displayName: 'Terraform Apply'
+    inputs:
+      provider: 'azurerm'
+      command: 'apply'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/ctp-prod'
+      commandOptions: '-auto-approve tfplan'
+      environmentServiceNameAzureRM: 'DALK-PROD'
+  
+  ###
+  

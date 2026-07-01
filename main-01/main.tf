@@ -3,7 +3,7 @@ module "resource_group" {
   resource_group_name = "${var.prefix}-RG"
   location            = var.location
 }
-
+##comment
 # module "network" {
 #   source = "../modules/network"
 
