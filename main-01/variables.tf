@@ -29,9 +29,9 @@ variable "client_secret" {
   type        = string
   default     = ""
 }
- variable "prefix" {
+variable "prefix" {
 
- }
+}
 
 variable "group_object_id" {
   description = "Entra group object Id"
@@ -48,131 +48,131 @@ variable "group_object_id" {
 
 
 variable "resource_group_name" {
- type        = string
- description = "Name of the resource group where CTP resources will be deployed"
- default     = ""
+  type        = string
+  description = "Name of the resource group where CTP resources will be deployed"
+  default     = ""
 }
 
 
-# Network variable details
+# # Network variable details
 
-variable "associate_route_table_name" {
-
-}
-variable "vnet_name_suffix" {
-
-}
-variable "subnet_name_suffix1" {
-
-}
-# variable "subnet_name_suffix2" {
+# variable "associate_route_table_name" {
 
 # }
-variable "address_space" {
-
-}
-# variable "subnet_address_suffixes" {
+# variable "vnet_name_suffix" {
 
 # }
+# variable "subnet_name_suffix1" {
 
-variable "subnet_address" {
+# }
+# # variable "subnet_name_suffix2" {
 
-}
+# # }
+# variable "address_space" {
 
+# }
+# # variable "subnet_address_suffixes" {
 
-variable "dns_servers" {
+# # }
 
-}
-variable "peering_name_suffix1" {
-
-}
-variable "peering_name_suffix2" {
-
-}
-variable "remote_vnet_id" {
-
-}
-variable "route_name" {
-
-}
-variable "route_table_names" {
-
-}
-variable "address_prefix" {
-
-}
-variable "next_hop_type" {
-
-}
-variable "next_hop_in_ip_address" {
-
-}
-variable "route_resource_groups" {
-
-}
-variable "associate_route_resource_group" {
-
-}
-
-variable "network_prefix" {
-
-}
-
-#blob storage account details
-variable "blob_storage_account_name" {
-
-}
-variable "blob_container_name" {
-}
-
-variable "blob_account_kind" {
-
-}
-variable "blob_account_tier" {
-
-}
-variable "blob_account_replication_type" {
-
-}
-variable "blob_container_access_type" {
-
-}
-
-variable "is_hns_enabled" {
-  
-}
-variable "public_network_access_enabled" {
-
-}
-
-# Private endpoint Details
-
-variable "private_service_connection_name_prefix" {
-
-}
-variable "dns_zone_group_name_prefix" {
-
-}
-
-#variable "dns_zone_name_postfix" {
-#}
-
-variable "pe_is_manual_connection" {
-
-}
-# variable "pe_subnet_id" {
+# variable "subnet_address" {
 
 # }
 
-# variable "private_dns_zone_id" {
 
-# }  
+# variable "dns_servers" {
 
-# variable "tags" {
-#  type        = map(string)
-#  description = "Tags to assign to all resources"
-#  default     = {}
 # }
+# variable "peering_name_suffix1" {
+
+# }
+# variable "peering_name_suffix2" {
+
+# }
+# variable "remote_vnet_id" {
+
+# }
+# variable "route_name" {
+
+# }
+# variable "route_table_names" {
+
+# }
+# variable "address_prefix" {
+
+# }
+# variable "next_hop_type" {
+
+# }
+# variable "next_hop_in_ip_address" {
+
+# }
+# variable "route_resource_groups" {
+
+# }
+# variable "associate_route_resource_group" {
+
+# }
+
+# variable "network_prefix" {
+
+# }
+
+# #blob storage account details
+# variable "blob_storage_account_name" {
+
+# }
+# variable "blob_container_name" {
+# }
+
+# variable "blob_account_kind" {
+
+# }
+# variable "blob_account_tier" {
+
+# }
+# variable "blob_account_replication_type" {
+
+# }
+# variable "blob_container_access_type" {
+
+# }
+
+# variable "is_hns_enabled" {
+
+# }
+# variable "public_network_access_enabled" {
+
+# }
+
+# # Private endpoint Details
+
+# variable "private_service_connection_name_prefix" {
+
+# }
+# variable "dns_zone_group_name_prefix" {
+
+# }
+
+# #variable "dns_zone_name_postfix" {
+# #}
+
+# variable "pe_is_manual_connection" {
+
+# }
+# # variable "pe_subnet_id" {
+
+# # }
+
+# # variable "private_dns_zone_id" {
+
+# # }  
+
+# # variable "tags" {
+# #  type        = map(string)
+# #  description = "Tags to assign to all resources"
+# #  default     = {}
+# # }
 
 
 

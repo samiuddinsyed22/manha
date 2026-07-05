@@ -1,8 +1,8 @@
-prefix   = "NI-EUS2-DALK-PROD-CTP-PROD"    #NI-EUS2-DALK-PROD-CTP-PROD-RG
-location                   = "East US 2"
-subscription_id = "749f76e7-6f14-46e2-a68a-8a1f2239d1a0"    #Datalake-prod subscription
-tenant_id = "179d26d3-3e59-4051-9377-05d3820e617c"
- 
+prefix          = "Syed2" #NI-EUS2-DALK-PROD-CTP-PROD-RG
+location        = "East US 2"
+subscription_id = "16f5a4bf-199d-4766-9a3c-e741339916a4" #Datalake-prod subscription
+tenant_id       = "ca709107-6daf-460c-9666-fd9194f6dc0d"
+
 # ########################################Network variables##################################################
 # network_prefix   = "NI-EUS2-DLK-PRD"
 # vnet_name_suffix = "10.10.122.43_VNET-001__22"
@@ -25,7 +25,7 @@ tenant_id = "179d26d3-3e59-4051-9377-05d3820e617c"
 
 # ###############################################################################################################
 # #######################################storage account variables###############################################
- 
+
 # #storage account variables
 # blob_storage_account_name     = "dfd"
 # blob_container_name           = "data"

@@ -1,9 +1,9 @@
 module "resource_group" {
-  source              = "../modules/resource_group"
+  source              = "../modules/rg"
   resource_group_name = "${var.prefix}-RG"
   location            = var.location
 }
-##comment
+##comment##MANAHA Azlan NOMAN
 # module "network" {
 #   source = "../modules/network"
 
@@ -61,10 +61,10 @@ module "resource_group" {
 #   depends_on = [module.blob_storage_account, module.network]
 
 #   source = "../modules/private_endpoint"
-  
+
 #   location            = var.location
 #   resource_group_name = "${var.prefix}-RG"
-  
+
 #   private_endpoint_name = "${var.blob_storage_account_name}-pe-01"
 #   #pe_subnet_id          = module.network.subnet_list[0].id
 #   #pe_subnet_id = var.pe_subnet_id
