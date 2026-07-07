@@ -3,6 +3,9 @@ module "resource_group" {
   resource_group_name = "${var.prefix}-RG"
   location            = var.location
 }
+
+##test comment7-July-2026
+
 ##comment##MANAHA Azlan NOMAN, Mahnaaz123
 # module "network" {
 #   source = "../modules/network"
