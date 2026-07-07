@@ -30,3 +30,5 @@ provider "azurerm" {
   features {}
 
 }
+
+##Added subscription ID
