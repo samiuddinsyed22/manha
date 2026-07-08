@@ -1,4 +1,4 @@
-prefix          = "Syed2" #NI-EUS2-DALK-PROD-CTP-PROD-RG
+prefix          = "Syed3" #NI-EUS2-DALK-PROD-CTP-PROD-RG
 location        = "East US 2"
 subscription_id = "16f5a4bf-199d-4766-9a3c-e741339916a4" #Datalake-prod subscription
 tenant_id       = "ca709107-6daf-460c-9666-fd9194f6dc0d"
