@@ -1,0 +1,17 @@
+[33mf8e78d3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/RAP/platform/mrap-lab/azure-rg[m[33m)[m updated code
+[33m04a201a[m updated providers
+[33m8fb006a[m updated providers
+[33m4b02c54[m[33m ([m[1;31morigin/feature/RAP/platform/mrap-lab/azure-rg[m[33m)[m updated provided subs ID
+[33m1d8bc26[m updated providers
+[33m255c69f[m update: moved yml pipeline to workflows
+[33m90867ef[m feat: added github action workflow for terraform deployment
+[33m3d5e910[m updated providers
+[33mb4986d4[m added comment in rf main
+[33me11410b[m commented in main root
+[33m4ea5f3e[m Fix: removed .terraform folder from git tracking
+[33mfef301d[m test comment added in main.tf
+[33mf35bd4f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m updated code
+[33m68726e9[m updated code
+[33me12d5ef[m added comment
+[33ma8c786b[m updated module
+[33m58beb95[m this is my labl
