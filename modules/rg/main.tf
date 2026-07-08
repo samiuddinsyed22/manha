@@ -5,3 +5,6 @@ resource "azurerm_resource_group" "rg" {
     "AMID Number"             = "Syed Samiuddin"
   }
 }
+
+
+##hello

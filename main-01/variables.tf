@@ -53,6 +53,30 @@ variable "resource_group_name" {
   default     = ""
 }
 
+variable "ARM_TENANT_ID" {
+  description = "Tenant id of the resources"
+  type        = string
+  default     = ""
+}
+
+variable "ARM_CLIENT_ID" {
+  description = "client id of the resources"
+  type        = string
+  default     = ""
+}
+
+variable "ARM_CLIENT_SECRET" {
+  description = "client secret of the resources"
+  type        = string
+  default     = ""
+}
+
+variable "ARM_SUBSCRIPTION_ID" {
+  description = "SUBSCRIPTION ID of the resources"
+  type        = string
+  default     = ""
+}
+
 
 # # Network variable details
 
