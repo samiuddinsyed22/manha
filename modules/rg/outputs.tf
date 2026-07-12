@@ -5,3 +5,5 @@ output "resource_group_name" {
 output "rg_id" {
   value = azurerm_resource_group.rg.id
 }
+
+##testing 12July26
