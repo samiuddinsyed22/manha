@@ -14,3 +14,5 @@ resource "azurerm_resource_group" "rg" {
 
  
 ### updates in local repo
+
+##update local2
