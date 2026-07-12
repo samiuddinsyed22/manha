@@ -15,3 +15,5 @@ resource "azurerm_resource_group" "rg" {
  
 ### updates in local repo
 ##Add a new change in remote repo
+
+#add local2 - remote
