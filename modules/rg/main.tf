@@ -9,4 +9,9 @@ resource "azurerm_resource_group" "rg" {
 
 ##hello
 
+
+### updates in remote repo
+
+ 
+### updates in local repo
 ##Add a new change in remote repo
