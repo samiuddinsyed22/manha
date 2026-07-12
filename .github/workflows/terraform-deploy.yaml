@@ -1,9 +1,15 @@
+name: Terraform Deploy
 name: 🚀 Terraform Deploy - Azure Resource Group
 
 on:
   push:
     branches:
       - feature/RAP/platform/mrap-lab/azure-rg
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    name: Terraform Plan & Apply
   pull_request:
     branches:
       - main
@@ -24,6 +30,33 @@ jobs:
       ARM_TENANT_ID:       ${{ secrets.ARM_TENANT_ID }}
 
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        working-directory: main-01
+        run: terraform init
+
+      - name: Terraform Format Check
+        working-directory: main-01
+        run: terraform fmt -check
+
+      - name: Terraform Validate
+        working-directory: main-01
+        run: terraform validate
+
+      - name: Terraform Plan
+        working-directory: main-01
+        run: terraform plan -out=tfplan
+
+      - name: Terraform Apply
+        working-directory: main-01
+        run: terraform apply -auto-approve tfplan
+
+        ###updated code
 
       - name: 📥 Checkout Code
         uses: actions/checkout@v4
