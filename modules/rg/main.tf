@@ -8,3 +8,5 @@ resource "azurerm_resource_group" "rg" {
 
 
 ##hello
+ 
+### updates in local repo
