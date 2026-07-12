@@ -1,4 +1,5 @@
 name: Terraform Deploy
+name: 🚀 Terraform Deploy - Azure Resource Group
 
 on:
   push:
@@ -9,6 +10,17 @@ on:
 jobs:
   terraform:
     name: Terraform Plan & Apply
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # ← Allows manual trigger from GitHub UI
+
+env:
+  TF_WORKING_DIR: ./main-01   # ← Points to your terraform folder
+
+jobs:
+  terraform:
+    name: 🏗️ Terraform Plan & Apply
     runs-on: ubuntu-latest
 
     env:
@@ -45,3 +57,28 @@ jobs:
         run: terraform apply -auto-approve tfplan
 
         ###updated code
+
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.5.0
+
+      - name: 📁 Terraform Init
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        run: terraform init
+
+      - name: ✅ Terraform Validate
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        run: terraform validate
+
+      - name: 📋 Terraform Plan
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        run: terraform plan -out=tfplan
+
+      - name: 🚀 Terraform Apply
+        working-directory: ${{ env.TF_WORKING_DIR }}
+        if: github.ref == 'refs/heads/feature/RAP/platform/mrap-lab/azure-rg'
+        run: terraform apply -auto-approve tfplan
