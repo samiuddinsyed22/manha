@@ -4,6 +4,9 @@ module "resource_group" {
   location            = var.location
 }
 
+
+####ufsyr
+
 ###Commented for 777777777777777772022222666
 #786786
 
